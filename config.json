@@ -1,0 +1,35 @@
+[
+    {
+        "name" : "JsonSetting",
+        "type": "json",
+        "value" : "From config.json",
+        "description" : "Value comes right from this JSON file"
+    },
+    {
+        "name" : "EnvSetting",
+        "type": "environ",
+        "value" : "ENV_VAR_1",
+        "description" : "Value comes from os.environ[value]"
+    },
+    {
+        "name" : "IniSetting",
+        "type": "ini",
+        "value" : null,
+        "details" : {
+            "file" : "./config.ini",
+            "section" : "PLATFORM",
+            "name" : "Name"
+        },
+        "description" : "Value comes from INI file config[section][name]"
+    },
+    {
+        "name" : "VaultSetting",
+        "type": "vault",
+        "value" : null,
+        "details" : {
+            "vault" : "experiencelab1000",
+            "secret" : "client-id"
+        },
+        "description" : "Value comes from Azue Key Vault"
+    }
+]

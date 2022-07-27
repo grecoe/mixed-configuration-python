@@ -1,0 +1,9 @@
+name: ConfigurationEnv
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:    
+    - azure-identity==1.10.0
+    - azure-keyvault-secrets==4.4.0
