@@ -8,11 +8,16 @@ os.environ["ENV_VAR_1"] = "From os.environ"
 conf = Config("./config.json")
 
 
-# Simply ask the config for a setting and it will be retrieved from wherever
-# it lives based on the configuration. 
+"""
+Simply ask the config for a setting and it will be retrieved from wherever
+it lives based on the configuration. 
+
+Note that all settings are also properties of the Config class itself and can
+be called with dot notation directly. 
+"""
 
 # In json
-print("JSON   :", conf.get("JsonSetting"))
+print("JSON   :", conf.get("JsonSetting"), " : ", conf.JsonSetting)
 # In os.environ
 print("ENVIRON:",conf.get("EnvSetting"))
 # In ini

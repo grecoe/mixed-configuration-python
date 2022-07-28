@@ -22,9 +22,16 @@ class Config:
                     self.settings.append(IniSetting(data))
                 elif data_type == "vault":
                     self.settings.append(VaultSetting(data))
+
+                # Set property
+                setattr(self, data["name"], self.settings[-1].get())
     
     def get(self, setting:str) -> str:
-        
+        """
+        Callers retrieve the value behind a setting by passing in the setting name
+        or by simply using a dot notation with the setting name as it will be loaded
+        into the class instance when requested.
+        """
         return_value = None
         for set in self.settings:
             if set.name.lower() == setting.lower():

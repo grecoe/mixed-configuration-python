@@ -1,0 +1,41 @@
+[
+    {
+        "name" : "PlatformName",
+        "type": "json",
+        "value" : "platform1000"
+    },
+    {
+        "name" : "DataPartition",
+        "type": "json",
+        "value" : "platform1000-opendes"
+    },
+    {
+        "name" : "LegalUri",
+        "type": "ini",
+        "value" : null,
+        "details" : {
+            "file" : "./platform.ini",
+            "section" : "CONNECTION",
+            "name" : "legal_url"
+        }
+    },
+    {
+        "name" : "Client",
+        "type": "vault",
+        "value" : null,
+        "details" : {
+            "vault" : "experiencelab1000",
+            "secret" : "client-id"
+        }
+    },
+    {
+        "name" : "Secret",
+        "type": "vault",
+        "value" : null,
+        "details" : {
+            "vault" : "experiencelab1000",
+            "secret" : "client-secret"
+        }
+    }
+
+]
