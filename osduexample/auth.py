@@ -55,10 +55,14 @@ class Credential:
         self.client = client
         self.secret = secret
         self.token = None
+        self.user_id = None
 
         if not self.tenant:
             result = CmdUtils.get_command_output(["az", "account", "show"])
             self.tenant = result["tenantId"]
+
+            result = CmdUtils.get_command_output(["az", "ad", "user", "show", "--id", result["user"]["name"]])
+            self.user_id = result["objectId"]
 
 
     def get_application_token(self) -> str:

@@ -20,6 +20,16 @@
         }
     },
     {
+        "name" : "EntitlementsUri",
+        "type": "ini",
+        "value" : null,
+        "details" : {
+            "file" : "./platform.ini",
+            "section" : "CONNECTION",
+            "name" : "entitlements_url"
+        }
+    },
+    {
         "name" : "Client",
         "type": "vault",
         "value" : null,
